@@ -43,6 +43,7 @@ export class HeaderComponent implements OnInit {
     });
 
     //
+    //
     // for(var item = 0; item < this.listTitles.length; item++){
     //     if(this.listTitles[item].url.toLowerCase() === titlee){
     //         return this.listTitles[item].title;
