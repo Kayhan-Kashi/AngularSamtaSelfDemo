@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Ayandeh';
+    src: url('../Fonts/WebYekan.eot');
+    src: url('../Fonts/990830 - Ayandeh Regular.ttf') format('truetype'), /* Saf3—5, Chrome4+, FF3.5, Opera 10+ */
+    url('../Fonts/WebYekan.woff') format('woff'), /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+    url('../Fonts/WebYekan.eot?#') format('eot'); /* IE6–8 */
+}
+
+@font-face {
+  font-family: 'BAyandeh';
+  src: url('../Fonts/BTitrBold.eot?#iefix') format('embedded-opentype'),
+        url('../Fonts/BTitrBold.woff') format('woff'),
+       url('../Fonts/990830 - Ayandeh Bold.ttf')  format('truetype')
+}

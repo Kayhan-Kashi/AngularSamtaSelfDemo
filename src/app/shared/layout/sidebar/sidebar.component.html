@@ -1,0 +1,24 @@
+<div class="sidebar-container">
+    <p-sidebar [modal]="true" [visible]="displayside" (onHide)="myCloseEvent();" position="right"
+        [baseZIndex]="10000">
+        <mat-divider></mat-divider>
+        <mat-tree [dataSource]="dataSource" [treeControl]="treeControl">
+            <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                <div class="d-flex align-items-center {{node?.active ? 'active' : ''}}">
+                    <i class="material-icons">{{node.icon}}</i>
+                    <button routerLink="{{node.url}}" mat-button class="text-tree">{{node.name}}</button>
+                </div>
+            </mat-tree-node>
+            <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                <div class="d-flex align-items-center">
+                    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'Toggle ' + node.name">
+                        <mat-icon class="mat-icon-rtl-mirror">
+                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                        <span mat-button class="text-tree">{{node.name}}</span>
+                    </button>
+                </div>
+            </mat-tree-node>
+        </mat-tree>
+    </p-sidebar>
+</div>

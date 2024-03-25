@@ -1,0 +1,77 @@
+.menu-container {
+    display: flex;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    justify-content: space-between;
+
+    .subheader {
+        border-top: 1px solid #ebedf3;
+    }
+}
+
+/*horizontal-menu{
+    font-family:Ayandeh !important;
+}*/
+
+/*.mat-button{
+    color:green !important;
+    font-family:Ayandeh !important;
+}*/
+
+.mat-menu {
+    color: red !important;
+
+}
+
+.gap-3 {
+    //emrooz - shobe - Milad
+    font-family: vazir !important;
+}
+
+.future-img-padding {
+    padding: 20px 20px 20px 20px;
+}
+
+.future-header-item {
+    font-weight: bold;
+}
+
+
+
+.rotate-p {
+    color: #4e406c;
+    transform: rotate(180deg);
+    animation: rt 1s infinite
+}
+
+@keyframes rt {
+    from {
+        transform: rotate(deg)
+    }
+
+    to {
+        transform: rotate(0deg)
+    }
+}
+
+@media screen and (max-width: 899px) {
+    div.horizontal-menu {
+        display: none;
+    }
+
+    div.side-bar-menu {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    div.horizontal-menu {
+        display: flex;
+    }
+
+    div.side-bar-menu {
+        display: none;
+    }
+}
+

@@ -1,0 +1,42 @@
+@import 'variable';
+@import 'app';
+/*@import 'pages';*/
+/*@import 'sidebar';*/
+
+@import '../scss/icons/font-awesome/css/font-awesome.min.css';
+@import '../scss/icons/simple-line-icons/css/simple-line-icons.css';
+@import '../scss/icons/themify-icons/themify-icons.css';
+@import "../scss/icons/material-design-iconic-font/css/materialdesignicons.min.css";
+
+/*@import 'widgets';*/
+/*@import 'grid';*/
+@import 'responsive';
+
+@import 'spinners.css';
+@import 'animate.css';
+@import "custom";
+
+global css for card in basicinformation .card-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -45px;
+  margin-left: -45px;
+}
+
+.p-button {
+    //background: #4e406c !important;
+    background: #fff !important;
+    color: #4e406c !important;
+    border: 1px solid #4e406c !important;
+    text-align: center !important;
+    padding: 10px 30px !important;
+}
+
+.mat-form-field{
+    line-height: 1.300;
+}
+
+.captchaMismatch {
+    color: red;
+    float: right;
+}

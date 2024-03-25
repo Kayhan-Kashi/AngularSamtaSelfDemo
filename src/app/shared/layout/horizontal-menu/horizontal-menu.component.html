@@ -1,0 +1,19 @@
+<span *ngFor="let node of items">
+    <ng-container *ngIf="!node.children || node.children.length == 0; then withOut; else withChild"></ng-container>
+    <ng-template #withChild>
+        <button mat-button [matMenuTriggerFor]="menu">
+            <span class="Menu-text-model">{{node.name}}</span>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="menu-item1" *ngFor="let child of node.children" (click)="openWindow(child)">
+                <mat-icon class="text-info">{{child.icon}}</mat-icon>
+                <span class="menu-child-color">{{child.name}}</span>
+            </button>
+        </mat-menu>
+    </ng-template>
+    <ng-template #withOut>
+        <button mat-button (click)="openWindow(node)">
+            <span class="Menu-text-model">{{node.name}}</span>
+        </button>
+    </ng-template>
+</span>

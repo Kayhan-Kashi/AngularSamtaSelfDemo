@@ -1,1 +1,569 @@
-/* You can add global styles to this file, and also import other style files */
+/*@import '~@angular/material/prebuilt-themes/indigo-pink.css';*/
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/*@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham/sass/ag-theme-balham.scss";
+
+@import '~@swimlane/ngx-datatable/themes/material.css';
+@import '~@swimlane/ngx-datatable/assets/icons.css';*/
+
+/*@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';*/
+
+/*@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/nova/theme.css';
+
+@import '~primeng/resources/primeng.min.css';*/
+
+
+/*"node_modules/primeng/resources/themes/bootstrap4-light-blue/theme.css",
+"node_modules/primeng/resources/themes/bootstrap4-light-purple/theme.css",
+"node_modules/primeng/resources/themes/bootstrap4-dark-blue/theme.css",
+"node_modules/primeng/resources/themes/bootstrap4-dark-purple/theme.css",
+"node_modules/primeng/resources/themes/md-light-indigo/theme.css",
+"node_modules/primeng/resources/themes/md-light-deeppurple/theme.css",
+"node_modules/primeng/resources/themes/md-dark-indigo/theme.css",
+"node_modules/primeng/resources/themes/md-dark-deeppurple/theme.css",
+"node_modules/primeng/resources/themes/mdc-light-indigo/theme.css",
+"node_modules/primeng/resources/themes/mdc-light-deeppurple/theme.css",
+"node_modules/primeng/resources/themes/mdc-dark-indigo/theme.css",
+"node_modules/primeng/resources/themes/mdc-dark-deeppurple/theme.css",
+"node_modules/primeng/resources/themes/tailwind-light/theme.css",
+"node_modules/primeng/resources/themes/fluent-light/theme.css",
+"node_modules/primeng/resources/themes/lara-light-indigo/theme.css",
+"node_modules/primeng/resources/themes/lara-dark-indigo/theme.css",
+"node_modules/primeng/resources/themes/lara-light-purple/theme.css",
+"node_modules/primeng/resources/themes/lara-dark-purple/theme.css",
+"node_modules/primeng/resources/themes/lara-light-blue/theme.css",
+"node_modules/primeng/resources/themes/lara-dark-blue/theme.css",
+"node_modules/primeng/resources/themes/lara-light-teal/theme.css",
+"node_modules/primeng/resources/themes/lara-dark-teal/theme.css",
+"node_modules/primeng/resources/themes/saga-blue/theme.css",
+"node_modules/primeng/resources/themes/saga-green/theme.css",
+"node_modules/primeng/resources/themes/saga-orange/theme.css",
+"node_modules/primeng/resources/themes/saga-purple/theme.css",
+"node_modules/primeng/resources/themes/vela-blue/theme.css",
+"node_modules/primeng/resources/themes/vela-green/theme.css",
+"node_modules/primeng/resources/themes/vela-orange/theme.css",
+"node_modules/primeng/resources/themes/vela-purple/theme.css",
+"node_modules/primeng/resources/themes/arya-blue/theme.css",
+"node_modules/primeng/resources/themes/arya-green/theme.css",
+"node_modules/primeng/resources/themes/arya-orange/theme.css",
+"node_modules/primeng/resources/themes/arya-purple/theme.css",
+"node_modules/primeng/resources/themes/nova/theme.css",
+"node_modules/primeng/resources/themes/nova-alt/theme.css",
+"node_modules/primeng/resources/themes/nova-accent/theme.css",
+"node_modules/primeng/resources/themes/luna-amber/theme.css",
+"node_modules/primeng/resources/themes/luna-blue/theme.css",
+"node_modules/primeng/resources/themes/luna-green/theme.css",
+"node_modules/primeng/resources/themes/luna-pink/theme.css",
+"node_modules/primeng/resources/themes/rhea/theme.css",*/
+
+
+@font-face {
+    font-family: 'Vazir';
+    src: url('assets/fonts/woff/Vazir-Medium-FD-WOL.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bkodak';
+    src: url('assets/fonts/Bkodak/BKoodakBold.eot') format('eot'), url('assets/fonts/Bkodak/BKoodakBold.woff') format('woff'), url('assets/fonts/Bkodak/BKoodakBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BKoodakBold';
+    src: url('assets/fonts/bkoodakbold.eot') format('eot'), url('assets/fonts/BKoodakBold.ttf') format('truetype'), url('assets/fonts/BKoodakBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'iransansweb';
+    src: url('assets/fonts/iran-sans/eot/iransansweb.eot') format('embedded-opentype'), url('assets/fonts/iran-sans/ttf/iransansweb.ttf') format('truetype'), url('assets/fonts/iran-sans/woff2/iransansweb.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Ayandeh';
+    src: url('assets/fonts/ayandeh_font/990830-ayandeh-regular.ttf') format('truetype'), url('assets/fonts/ayandeh_font/btitrbold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'btitrbold';
+    src: url('assets/fonts/ayandeh_font/btitrbold.woff') format('woff');
+}
+
+body {
+    font-family: iransansweb !important;
+    /*font-family: Vazir !important;*/
+    overflow: hidden;
+    /*font-size: .8em !important;*/
+}
+
+.ayandeh-font {
+    font-family: Ayandeh !important;
+}
+
+.vazir-font {
+    font-family: Vazir !important;
+}
+
+p,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+label,
+td>div,
+.menu-child-color,
+.gap-3,
+.mat-tab-label-content,
+.mat-sort-header-content,
+.mat-input-element,
+.mat-button-wrapper {
+    font-family: Vazir !important;
+}
+
+/*body {*/
+/*  font-family: -apple-system, BlinkMacSystemFont, “Segoe UI”, Roboto, Helvetica, Arial, sans-serif, “Apple Color Emoji”, “Segoe UI Emoji”, “Segoe UI Symbol”;
+*/
+
+/*font-family: "B Elham";
+}*/
+
+.loaderContainer {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    width: 400px;
+    padding: 10px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #9a7dd9;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+}
+
+.vazir {
+    font-family: Vazir !important;
+}
+
+.mat-sidenav-container,
+.mat-sidenav-content {
+    transform: none !important;
+}
+
+
+
+.iranSans-web {
+    font-family: iransansweb !important;
+}
+
+.iranSans-faNum {
+    font-family: irsansfanum !important;
+}
+
+@font-face {
+    font-family: 'irsansfanum';
+    src: url('assets/fonts/irsansfanum.woff') format('woff'), url('assets/fonts/irsansfanum.woff2') format('woff2');
+}
+
+
+.modal-content {
+    border-radius: 1rem !important;
+}
+
+.modal-delete {
+    height: 386px !important;
+    width: 368px !important;
+    margin-top: 14%;
+    border-radius: 1rem;
+}
+
+
+/*button:focus {
+  outline: 0 !important;
+}
+
+button {
+  border: 0 !important;
+}*/
+
+
+.disabled-btn {
+    cursor: not-allowed !important;
+    box-shadow: none !important;
+    background-color: #9FA3A7 !important;
+}
+
+
+.lbl-style {
+    color: #9FA3A7 !important;
+}
+
+.g-color {
+    color: #9FA3A7 !important;
+}
+
+.lbl-look {
+    color: #9FA3A7 !important;
+}
+
+.mat-form-field-label {
+    color: #9FA3A7 !important;
+}
+
+border radius grid panel .ag-theme-balham .ag-root-wrapper {
+    border-radius: 1em !important;
+}
+
+
+
+
+dp-date-picker.dp-material .dp-picker-input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: right;
+    margin-top: 4px;
+    margin-right: -4px;
+}
+
+dp-date-picker.dp-material .dp-picker-input:hover {
+    box-shadow: 0.5px 1px 0.5px #ccc;
+    transition: 0.5s
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value {
+    font-size: .8em;
+    margin-bottom: 5px;
+    background-color: #cbcbcb;
+    border-radius: 2px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected,
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected.ng-option-marked {
+    color: #333;
+    background-color: #cbcbcb;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: #cbcbcb;
+    color: #333;
+}
+
+.ng-select.ng-select-focused:not(.ng-select-opened)>.ng-select-container {
+    box-shadow: none;
+    border: 2px solid #1534c3;
+    transition: 0.2s
+}
+
+[dir="rtl"] .ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon.left {
+    border-left: 1px solid #cbcbcb;
+    border-right: none;
+}
+
+.ng-select.ng-select-opened>.ng-select-container:hover {
+    box-shadow: none;
+    border: 2px solid #000000;
+    transition: 0.2s
+}
+
+.ng-select.ng-select-multiple .ng-select-container .ng-value-container .ng-value .ng-value-icon:hover {
+    background-color: #cbcbcb;
+    color: red;
+}
+
+.ag-root ::-webkit-scrollbar {
+    width: 0em !important;
+    height: 0.5em
+}
+
+.p-component {
+    font-family: iransansweb !important;
+    font-size: 0.8rem !important
+}
+
+/*.mat-tab-label {
+  font-family: iransansweb !important;
+}*/
+
+.p-dialog-content {
+    overflow-y: inherit !important;
+}
+
+legend {
+    font-size: 0.75rem !important;
+}
+
+
+.p-treetable .p-treetable-thead>tr>th {
+    text-align: right !important;
+    padding: 0rem 0rem !important;
+}
+
+.p-treetable .p-treetable-tbody>tr>td {
+    text-align: right !important;
+    padding: 0rem 0rem !important;
+}
+
+.p-field {
+    margin-bottom: 0rem !important;
+}
+
+.p-mb-4 {
+    margin-bottom: 0rem !important;
+}
+
+.p-datatable .p-datatable-header {
+    padding: 0rem 1rem !important;
+}
+
+.p-datatable .p-datatable-tbody>tr>td {
+    padding: 0rem 0.60rem !important;
+    border: 1px solid #f3f5e0 !important;
+    border-width: 0.1px 0.1px 0.1px 0px !important;
+    color: #054f99 !important;
+}
+
+.p-datatable .p-datatable-thead>tr>th {
+    padding: 1rem 1rem !important;
+    color: #054f99 !important;
+}
+
+.p-dialog .p-dialog-header {
+    border-top-right-radius: 30px !important;
+    border-top-left-radius: 30px !important;
+}
+
+.p-input-icon-left>.p-inputtext {
+    padding-left: 10rem !important;
+}
+
+
+
+.p-accordion .p-accordion-header:not(.p-disabled).p-highlight .p-accordion-header-link {
+    border-bottom-right-radius: 30px !important;
+    border-color: #0c73d9 !important;
+}
+
+.p-fieldset .p-fieldset-content {
+    padding: 0.10rem !important;
+}
+
+.p-fileupload .p-fileupload-content {
+    padding: 0rem !important;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.p-fileupload .p-fileupload-buttonbar {
+    padding: 0rem !important;
+}
+
+.p-fieldset .p-fieldset-legend {
+    padding: 0.20rem !important;
+    border-top-right-radius: 30px !important;
+}
+
+.p-accordion .p-accordion-content {
+    padding: 0.20rem !important;
+}
+
+.p-dialog .p-dialog-content .p-field>label {
+    margin-top: 0.3rem !important;
+}
+
+
+.p-field>label {
+    color: #054f99 !important;
+    margin-bottom: 0rem !important;
+    /*margin-top: 0.3rem !important;*/
+}
+
+.p-button.p-button-text {
+    color: #054f99 !important;
+}
+
+.p-dialog .p-dialog-header .p-dialog-header-icon {
+    color: #eb1227 !important;
+}
+
+
+
+.p-accordion .p-accordion-header .p-accordion-header-link {
+    color: #054f99 !important;
+}
+
+/*.mat-tab-label, .mat-tab-link {
+  color: #054f99 !important;
+}*/
+
+.p-panelmenu .p-panelmenu-header>a {
+    color: #054f99 !important;
+}
+
+.p-panelmenu .p-panelmenu-content .p-menuitem .p-menuitem-link .p-menuitem-text {
+    color: #054f99 !important;
+}
+
+.p-panelmenu .p-panelmenu-panel:first-child .p-panelmenu-header>a {
+    border-top-right-radius: 30px !important;
+}
+
+.p-dialog {
+    box-shadow: 0px 0px 0px 0px rgb(0 0 0), 0px 0px 0px 0px rgb(0 0 0), 0px 0px 0px 0px rgb(0 0 0) !important;
+}
+
+
+.ui-rtl .ui-tree .ui-treenode-children {
+    margin: 0;
+    padding: 0 1em 0 0;
+}
+
+.p-dropdown .p-dropdown-clear-icon {
+    right: 0rem !important;
+}
+
+
+.p-button.p-button-success,
+.p-buttonset.p-button-success>.p-button,
+.p-splitbutton.p-button-success>.p-button {
+    /*background-color: #6d8b54 !important;*/
+}
+
+.p-grid {
+    margin-right: 0rem !important;
+}
+
+.p-accordion .p-accordion-content {
+    color: #054f99 !important;
+}
+
+.p-dropdown .p-dropdown-clear-icon {
+    color: red !important;
+}
+
+.p-dropdown .p-dropdown-trigger {
+    color: #054f99 !important;
+}
+
+
+
+.mat-tab-body-content {
+    overflow: hidden !important;
+}
+
+.p-menu .p-menuitem-link {
+    padding: 0rem !important;
+}
+
+.p-menu {
+    direction: rtl !important;
+}
+
+
+/*.mat-tab-label {
+  background-color: #054f99 !important;
+}*/
+/*.mat-tab-label, .mat-tab-link {
+  color: WindowText !important;
+}*/
+/*
+  .mat-tab-label .mat-tab-label-content {
+    color: WindowText !important;
+  }
+*/
+.mat-tab-label,
+.mat-tab-link {
+    color: #054f99 !important;
+    font-size: 15px !important;
+    font-family: iransansweb !important;
+}
+
+.mat-drawer {
+    overflow-y: scroll !important
+}
+
+.p-menu .p-menuitem-link .p-menuitem-text {
+    color: #054f99 !important;
+}
+
+.p-menu .p-submenu-header {
+    color: #054f99 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #054f99 !important;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.center-button {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 10px;
+}
+
+
+/*Editor*/
+.header {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.html-header {
+    margin: 15px 0 5px;
+}
+
+.html {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    min-height: 20px;
+    max-height: 10rem;
+    overflow: auto;
+}
+
+/*Editor*/

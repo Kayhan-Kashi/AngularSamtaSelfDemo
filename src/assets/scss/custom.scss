@@ -1,0 +1,154 @@
+body {
+  direction: rtl;
+  text-align: right;
+  background-color: #eef0f8;
+}
+
+.topbar .top-navbar {
+  padding: 0 !important;
+}
+
+/*.mr-auto, .mx-auto {
+  margin-left: auto !important;
+  margin-right: 0 !important;
+}*/
+
+.dropdown-menu-right {
+  right: auto !important;
+  left: 0px !important;
+}
+
+.navbar-brand-span {
+  padding-left: 10px;
+}
+
+.navbar-brand-logo-title {
+  display: inline-block;
+}
+
+.dropdown-menu {
+  right: 0;
+}
+
+.ngx-datatable *, .ngx-datatable *:before, .ngx-datatable *:after {
+  float: right !important;
+}
+
+.custom-btn {
+  width: 90px;
+}
+
+.custom-btn:disabled {
+  cursor: not-allowed;
+}
+
+.custom-btn-confirm {
+  width: 70px;
+  color: #fff;
+}
+
+input readonly[type=text], textarea {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+}
+
+.ngx-datatable .datatable-header .datatable-header-cell .sort-btn {
+  font-size: 20px !important;
+}
+
+.ngx-datatable.fixed-header .datatable-header .datatable-header-inner .datatable-header-cell {
+
+  &:last-child {
+    border-left: none !important;
+  }
+}
+
+.ngx-datatable.material.single-selection .datatable-body-row.active,
+.ngx-datatable.material.single-selection .datatable-body-row.active .datatable-row-group, .ngx-datatable.material.multi-selection .datatable-body-row.active, .ngx-datatable.material.multi-selection .datatable-body-row.active .datatable-row-group,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active,
+.ngx-datatable.material.multi-click-selection .datatable-body-row.active .datatable-row-group {
+  background-color: #74afd9 !important;
+}
+
+.modal-content {
+  border: none !important;
+  direction: ltr !important;
+}
+
+.modal-title {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.custom-modal-header-confirm {
+  height: 40px !important;
+  background-color: #ee9f22;
+  color: #fff;
+  direction: rtl !important;
+  padding: 4px 25px 38px 0 !important;
+  font-size: 13px;
+}
+
+.my-remove-popup-text {
+  padding-top: 6px;
+  text-align: center;
+  padding-right: 25px;
+  display: inline-block;
+  direction: rtl;
+}
+
+.btn-popup-remove-danger, .btn-popup-remove-danger-confirm {
+  margin-right: 35px !important;
+}
+
+.btn-popup-remove-danger-confirm, .btn-popup-remove-danger-confirm:hover {
+  background-color: #c8ced0 !important;
+}
+
+.btn-popup-remove-success-confirm {
+  margin-right: 50px;
+  background-color: #ee9f22 !important
+}
+
+.custom-btn-login {
+  width: 120px;
+  margin: 0 20px;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.parent-div-error-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.div-error-login {
+  width: 400px;
+  height: 70px;
+  z-index: 1;
+  background-color: #ED6866;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.custom-select-role {
+  text-align: center;
+  text-align-last: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.custom-select-role option {
+  background-color: #ccc;
+  min-height: 2em !important;
+  border: 3px solid red;
+  font-weight: 500;
+}
+

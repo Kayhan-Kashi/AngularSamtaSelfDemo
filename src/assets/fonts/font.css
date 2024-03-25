@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Vazir';
+  src: url('assets/fonts/Vazir-Bold.eot');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Vazir';
+  src: url('assets/fonts/Vazir-Bold.eot') format('eot'), url('assets/fonts/Vazir-Bold.woff') format('woff'), url('assets/fonts/Vazir-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Bkodak';
+  src: url('assets/fonts/Bkodak/BKoodakBold.eot') format('eot'), url('assets/fonts/Bkodak/BKoodakBold.woff') format('woff'), url('assets/fonts/Bkodak/BKoodakBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'BKoodakBold';
+  src: url('assets/fonts/bkoodakbold.eot') format('eot'), url('assets/fonts/BKoodakBold.ttf') format('truetype'), url('assets/fonts/BKoodakBold.woff') format('woff');
+}
