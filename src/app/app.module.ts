@@ -16,6 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { MatTreeModule } from '@angular/material/tree';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,16 @@ import { MatTreeModule } from '@angular/material/tree';
     CdkTreeModule,
     MatTreeModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptor,
+      multi: true,
+    },
+    {
+      provide: JwtHelperService,
+    },
+  ],
 
   bootstrap: [AppComponent],
 })

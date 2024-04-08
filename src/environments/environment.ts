@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  //apiUrl:'http://bs.ba24.ir/samtaapi',
+  apiUrl: 'https://bs.ba24.ir/SamtaLoanInteranetAPI',
+  ssoUrl: 'https://bs.ba24.ir/UserManagement_Test_V4/login',
+  subAppUrl: '/SamtaLoanInteranet',
+  currentUser: 'currentUser_SamtaLoanInteranet',
+  userFullName: 'userFullName_SamtaLoanInteranet',
+  userBranch: 'userBranch_SamtaLoanInteranet',
+  userRoles: 'userRoles_SamtaLoanInteranet',
 };
 
 /*
