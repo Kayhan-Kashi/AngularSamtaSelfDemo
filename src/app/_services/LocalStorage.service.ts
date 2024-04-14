@@ -1,15 +1,17 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Roles } from '../_entities/userRole';
+import { ListItems } from '../_entities/Response';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LocalStorageService {
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   GetFirmUserHistory() {
-    return JSON.parse(<string>localStorage.getItem('FirmUserHistory'));
+    return JSON.parse(localStorage.getItem('FirmUserHistory')!);
   }
 
   SetFirmUserHistory(data) {
@@ -20,8 +22,8 @@ export class LocalStorageService {
     localStorage.removeItem('FirmUserHistory');
   }
 
-  GetCurrentUser(): any {
-    return JSON.parse(<string>localStorage.getItem(environment.currentUser));
+  GetCurrentuser(): any {
+    return JSON.parse(localStorage.getItem(environment.currentUser)!);
   }
 
   SetCurrentuser(data: any) {
@@ -33,7 +35,7 @@ export class LocalStorageService {
   }
 
   GetAccessToken() {
-    return JSON.parse(<string>localStorage.getItem('access_token'));
+    return JSON.parse(localStorage.getItem('access_token')!);
   }
 
   SetAccessToken(data) {
@@ -44,14 +46,15 @@ export class LocalStorageService {
     localStorage.removeItem('access_token');
   }
 
+  //User Roles data
   GetUserRolesData(): Array<Roles> {
     var d = new Array<Roles>();
-    d = JSON.parse(<string>localStorage.getItem(environment.userRoles));
+    d = JSON.parse(localStorage.getItem(environment.userRoles)!);
     return d;
   }
 
-  SetUserRolesData(roles: Array<Roles>) {
-    localStorage.setItem(environment.userRoles, JSON.stringify(roles));
+  SetUserRolesData(data: ListItems<Roles>) {
+    localStorage.setItem(environment.userRoles, JSON.stringify(data));
   }
 
   RemoveUserRolesData() {

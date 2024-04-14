@@ -16,8 +16,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { SidebarComponent } from './shared/layout/sidebar/sidebar.component';
 import { CdkTreeModule } from '@angular/cdk/tree';
 import { MatTreeModule } from '@angular/material/tree';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+import { JWT_OPTIONS, JwtHelperService } from '@auth0/angular-jwt';
+import { SSOLoginCallbackComponent } from './shared/ssologin-callback/ssologin-callback.component';
+import {
+  DateAdapter,
+  MAT_DATE_FORMATS,
+  MAT_DATE_LOCALE,
+} from '@angular/material/core';
+import { CustomDateAdapter } from './shared/utilities/CustomDateAdapter';
+import { UserLogoutComponent } from './shared/layout/user-logout/user-logout.component';
+
+const MY_DATE_FORMATS = {
+  parse: {
+    dateInput: { month: 'short', year: 'numeric', day: 'numeric' },
+  },
+  display: {
+    dateInput: 'input',
+    monthYearLabel: { year: 'numeric', month: 'short' },
+    dateA11yLabel: { year: 'numeric', month: 'long', day: 'numeric' },
+    monthYearA11yLabel: { year: 'numeric', month: 'long' },
+  },
+};
 
 @NgModule({
   declarations: [
@@ -26,6 +47,8 @@ import { JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
     HorizontalMenuComponent,
     DefaultLayoutComponent,
     SidebarComponent,
+    SSOLoginCallbackComponent,
+    UserLogoutComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -33,6 +56,7 @@ import { JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ToolbarModule,
     ButtonModule,
     MatMenuModule,
@@ -48,9 +72,17 @@ import { JwtHelperService, JwtInterceptor } from '@auth0/angular-jwt';
       useClass: JwtInterceptor,
       multi: true,
     },
+    // { provide: MAT_DATE_LOCALE, useValue: 'fa-IR' },
+    // {
+    //   provide: DateAdapter,
+    //   useClass: CustomDateAdapter,
+    //   deps: [MAT_DATE_LOCALE],
+    // },
+    // { provide: MAT_DATE_FORMATS, useValue: MY_DATE_FORMATS },
     {
       provide: JwtHelperService,
     },
+    { provide: JWT_OPTIONS, useValue: JWT_OPTIONS, useClass: JwtHelperService },
   ],
 
   bootstrap: [AppComponent],

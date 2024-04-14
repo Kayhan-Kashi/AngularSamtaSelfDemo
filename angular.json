@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "baseHref": "/SamtaLoanInteranet/",
             "outputPath": "dist/angular-samta-self-demo",
             "index": "src/index.html",
             "main": "src/main.ts",

@@ -3,6 +3,30 @@
         <div class="gap-3">
             <a href="/SamtaLoanInteranet" class="future-img-padding"><img width="135" class="logo" src="./assets/img/logo-footer.caf14879.svg"></a>
             <app-horizontal-menu></app-horizontal-menu>
-        </div>     
+        </div> 
+        <div class="p-toolbar-group-left gap-3 future-header-item">
+            <div class="currentDate p-toolbar-group-left future-header-item text-info ">
+                <a to="/">امروز : {{currentDate}}</a>
+            </div>
+            <div class="vr"></div>
+            <div class="branchCode text-info">
+                <a to="/">شعبه : {{branchCode}}</a>
+            </div>
+            <div class="vr"></div>
+            <a to="/" class="text-info">{{loginUser}}</a>
+            <div class="vr"></div>
+            <i class="material-icons rotate-p text-info">hourglass_top</i>
+            <div class="timer-parent text-info">
+                <span class="remain-time"> {{remainSec}} : {{remainMin}} </span>
+                <!--<span class="remain-title">اتمام زمان ورود شما</span>-->
+            </div>
+            <div class="vr"></div>
+            <div title="برای ورود به سامانه قدیمی سمتا لطفا کلیک نمایید">
+                <button mat-button class="btn btn-warning" (click)="onSubmit()">سامانه قدیمی</button>
+            </div>
+            <button mat-button routerLink="/User/Logout">
+                <mat-icon>logout</mat-icon>
+            </button>
+        </div>    
     </div>
 </p-toolbar>
