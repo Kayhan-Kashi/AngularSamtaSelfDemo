@@ -23,21 +23,7 @@ export class AuthGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ): Observable<boolean> {
-    //this.authenticationService.updateUser();
     let currentUser: any = this.authenticationService.currentUserValue;
-
-    // if (!currentUser) {
-    //   var userStr = localStorage.getItem(environment.currentUser);
-    //   if (userStr && userStr.length > 0) {
-    //     // this.authenticationService.currentUserSubject.next(
-    //     //   JSON.parse(localStorage.getItem(environment.currentUser)!)
-    //     // );
-    //     //console.log(currentUser);
-    //     currentUser = JSON.parse(
-    //       localStorage.getItem(environment.currentUser)!
-    //     );
-    //   }
-    // }
 
     if (currentUser) {
       // logged in so return true
@@ -57,7 +43,6 @@ export class AuthGuard implements CanActivate {
             return of(false);
           })
         );
-        //return of(true);
       } else {
         this.redirectToLogin(state.url);
         return of(false);
