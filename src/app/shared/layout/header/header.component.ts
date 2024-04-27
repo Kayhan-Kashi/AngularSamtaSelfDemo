@@ -35,8 +35,6 @@ export class HeaderComponent implements OnInit {
   public remainMin: any = 0;
   public remainSec: any = 0;
   public refreshTokenTimeout: any;
-  public loginUserBehaviour = new BehaviorSubject<string>('');
-  public branchCodeBehaviour = new BehaviorSubject<string>('');
 
   constructor(
     location: Location,

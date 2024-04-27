@@ -19,14 +19,8 @@ export class DefaultLayoutComponent implements OnInit {
   public isSidebarHide: boolean = false;
   public branchCode: string;
   public loginUser: string;
-  public loginUserBehaviour = new BehaviorSubject<string>('');
-  public branchCodeBehaviour = new BehaviorSubject<string>('');
 
-  constructor(
-    private userService: UserService,
-    private cdr: ChangeDetectorRef,
-    private ngZone: NgZone
-  ) {}
+  constructor() {}
 
   ngOnInit(): void {
     this.innerHeight = window.innerHeight - 415;
