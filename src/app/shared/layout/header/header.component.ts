@@ -1,6 +1,14 @@
 import { LocalStorageService } from './../../../_services/LocalStorage.service';
 import { UserService } from 'src/app/_services/user.service';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Input,
+  NgZone,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { MenuNode } from 'src/_entities/menuNode';
@@ -8,6 +16,7 @@ import { TreeData } from '../../utilities/routes';
 import * as moment from 'jalali-moment';
 import { environment } from 'src/environments/environment';
 import { AuthenticationService } from 'src/app/_services/authentication.service';
+import { BehaviorSubject, map } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -26,6 +35,8 @@ export class HeaderComponent implements OnInit {
   public remainMin: any = 0;
   public remainSec: any = 0;
   public refreshTokenTimeout: any;
+  public loginUserBehaviour = new BehaviorSubject<string>('');
+  public branchCodeBehaviour = new BehaviorSubject<string>('');
 
   constructor(
     location: Location,
@@ -35,8 +46,6 @@ export class HeaderComponent implements OnInit {
     private authenticationService: AuthenticationService
   ) {
     this.location = location;
-    this.localStorageService = localStorageService;
-    this.authenticationService = authenticationService;
   }
 
   ngAfterViewInit() {
@@ -46,7 +55,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getUserInfo();
+    this.setUserData();
     this.currentDate = this.convertToPersianDate(new Date());
     this.listTitles = TreeData;
     this.getTitle();
@@ -111,21 +120,12 @@ export class HeaderComponent implements OnInit {
     return moment(date).locale('fa').format('YYYY/M/D');
   }
 
-  getUserInfo() {
-    let userInfo = localStorage.getItem(environment.userFullName);
-    if (userInfo == null || userInfo == '') {
-      this.userService.getUserInfo().subscribe(
-        (res) => {
-          localStorage.setItem(environment.userFullName, res.value.fullName);
-          localStorage.setItem(environment.userBranch, res.value.branchCode);
-          this.ngOnInit();
-        },
-        (err) => {}
-      );
-    } else {
-      this.loginUser = localStorage.getItem(environment.userFullName)!;
-      this.branchCode = localStorage.getItem(environment.userBranch)!;
-    }
+  setUserData() {
+    let userInfo = this.userService.getUserData();
+    userInfo.subscribe((userInfo) => {
+      this.loginUser = userInfo.fullName!;
+      this.branchCode = userInfo.branchCode!;
+    });
   }
 
   startRefreshTokenTimer() {
