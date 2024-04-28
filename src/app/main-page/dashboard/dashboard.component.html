@@ -1,1 +1,25 @@
-<p>dashboard works!</p>
+<div class="row main-div-display">
+    <div class="my-lg-20 my-10">
+        <span class="font-size-h3 fw-bold">سامانه تسهیلات بانک آینده (سمتا)</span>
+        <p class="my-5 font-size-h3-xxl font-size-h5 text-justify">
+
+        </p>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div *ngIf="adminAccess" (click)="openWindow('SystemManagement')"
+            class="main-div-display col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex flex-column">
+            <img src="./assets/img/SystemManagment11.png">
+            <span class="vazir-font fontcolor main-text-display text-info fontcolor">مدیریت سامانه</span>
+        </div>
+        <div (click)="openWindow('Report')"
+            class="main-div-display col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex flex-column">
+            <img src="./assets/img/Report11.png">
+            <span class="vazir-font main-text-display text-info fontcolor">کارتابل و گزارش ها</span>
+        </div>
+        <div *ngIf="adminAccess" (click)="openWindow('Cartable')"
+            class="main-div-display col-lg-3 col-md-3 col-sm-12 col-xs-12 d-flex flex-column">
+            <img src="./assets/img/Cartable11.png">
+            <span class="vazir-font main-text-display text-info fontcolor">مشخصات مشتری</span>
+        </div>
+    </div>
+</div>
