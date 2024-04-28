@@ -27,6 +27,7 @@ import {
 } from '@angular/material/core';
 import { CustomDateAdapter } from './shared/utilities/CustomDateAdapter';
 import { UserLogoutComponent } from './shared/layout/user-logout/user-logout.component';
+import { FooterComponent } from './shared/layout/footer/footer.component';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -49,6 +50,7 @@ const MY_DATE_FORMATS = {
     SidebarComponent,
     SSOLoginCallbackComponent,
     UserLogoutComponent,
+    FooterComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [

@@ -1,0 +1,128 @@
+.footer-main {
+    width: 100%;
+    bottom: 0;
+
+    .footer-box {
+        text-align: center;
+    }
+
+    .bg-main {
+        background-color: #e6e6fa;
+    }
+
+
+
+    .footer-class {
+        text-align: center;
+    }
+
+    .address-container {
+        width: 300px;
+
+        mat-icon {
+            width: 75px;
+        }
+
+    }
+
+    .contact-container {
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .contact-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .contact-inner {
+                display: flex;
+                text-align: right;
+                width: 197px;
+
+                mat-icon {
+                    margin-left: 5px;
+                }
+
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 414px) and (min-width: 360px) {
+    .container-fluid {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+    .footer-main {
+        position: initial;
+    }
+
+    .address-container {
+        padding: 0 !important;
+    }
+
+    .footer-box {
+        h3 {
+            margin-bottom: 0 !important;
+        }
+
+        hr {
+            margin: 5px 0;
+        }
+
+        .custom-links {
+            margin-bottom: 5px !important;
+        }
+
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .footer-main {
+        position: initial;
+
+        .contact-container {
+            min-height: 100px !important;
+        }
+
+        .contact-box {
+            margin-bottom: 5px !important;
+        }
+
+    }
+
+    .address-container {
+        padding: 0 !important;
+    }
+
+    .footer-box {
+        h3 {
+            margin-bottom: 0 !important;
+        }
+
+        hr {
+            margin: 5px 0;
+        }
+
+        .custom-links {
+            margin-bottom: 5px !important;
+        }
+
+        .contact-inner {
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+
+            label {
+                width: 95px !important;
+            }
+
+        }
+    }
+}
