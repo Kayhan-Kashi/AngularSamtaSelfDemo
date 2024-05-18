@@ -28,6 +28,12 @@ import {
 import { CustomDateAdapter } from './shared/utilities/CustomDateAdapter';
 import { UserLogoutComponent } from './shared/layout/user-logout/user-logout.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
+import { TableComponent } from './shared/components/table/table.component';
+import { MenuDropDownComponent } from './shared/components/menu-drop-down/menu-drop-down.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatSortModule } from '@angular/material/sort';
+import { DataPropertyGetterPipe } from './shared/components/table/data-property-getter-pipe/data-property-getter.pipe';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -51,6 +57,9 @@ const MY_DATE_FORMATS = {
     SSOLoginCallbackComponent,
     UserLogoutComponent,
     FooterComponent,
+    TableComponent,
+    MenuDropDownComponent,
+    DataPropertyGetterPipe,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -67,6 +76,9 @@ const MY_DATE_FORMATS = {
     AppRoutingModule,
     CdkTreeModule,
     MatTreeModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
   ],
   providers: [
     {

@@ -1,0 +1,10 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="">
+    <mat-icon>{{menuIcon}}</mat-icon>
+    {{menuLabel}}
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item *ngFor="let item of menuListItems" (click)="clickMenuItem(item)" [disabled]="item.isDisabled">
+        <mat-icon>{{ item.menuIcon }}</mat-icon>
+        <span> {{ item.menuLinkText }}</span>
+    </button>
+</mat-menu>
