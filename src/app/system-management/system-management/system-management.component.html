@@ -1,0 +1,26 @@
+<div class="row">
+    <span class="font-weight-bold">مدیریت سامانه</span>
+</div>
+
+<div class="row">
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+        <div class="row">
+            <div *ngFor="let node of items" (click)="openWindow(node)"
+                class="border rounded text-center flex-column align-items-center main-div-display col-lg-2 col-md-2 col-sm-12 col-xs-12">
+                <div>
+                    <mat-icon class="main-icon-display text-info">{{node.icon}}</mat-icon>
+                </div>
+                <span class="main-text-display text-info">{{node.name}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="p-toolbar-group-left col-lg-3 col-md-3 col-sm-12 col-xs-12">
+        <div class="col-md-12">
+            <div class="row mt-3">
+            </div>
+            <div class="pb-3 mt-3">
+                <img width="100%" height="100%" src="./assets/img/SystemManagment11.png">
+            </div>
+        </div>
+    </div>
+</div>

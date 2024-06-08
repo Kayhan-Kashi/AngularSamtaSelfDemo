@@ -15,6 +15,7 @@ import { MatSort, Sort } from '@angular/material/sort';
 import { MenuListItem } from '../menu-drop-down/MenuListItem';
 import { TableColumn } from './TableColumn';
 import { TableActionBtn } from './TableActionBtn';
+import { IPageEvent } from 'src/app/_entities/IPageEvent';
 
 @Component({
   selector: 'custom-table',
@@ -47,7 +48,7 @@ export class TableComponent implements OnInit, AfterViewInit {
   @Output() rowAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() menuAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() rowItemSelectedEmitter: EventEmitter<any> = new EventEmitter();
-  @Output() paginationInfoEmitter: EventEmitter<any> = new EventEmitter();
+  @Output() paginationInfoEmitter: EventEmitter<PageEvent> = new EventEmitter();
   @Output() actionButtonEmmiter: EventEmitter<any> = new EventEmitter();
 
   public pageIndex: number = 0;
@@ -168,7 +169,7 @@ export class TableComponent implements OnInit, AfterViewInit {
     }
   }
 
-  emitPaginationInfo(eventPageInfo: PageEvent) {
+  emitPaginationInfo(eventPageInfo: IPageEvent) {
     this.pageSize = eventPageInfo.pageSize;
     this.pageIndex = eventPageInfo.pageIndex;
     this.paginationInfoEmitter.emit(eventPageInfo);

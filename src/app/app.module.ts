@@ -2,7 +2,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './shared/layout/header/header.component';
@@ -28,12 +28,15 @@ import {
 import { CustomDateAdapter } from './shared/utilities/CustomDateAdapter';
 import { UserLogoutComponent } from './shared/layout/user-logout/user-logout.component';
 import { FooterComponent } from './shared/layout/footer/footer.component';
-import { TableComponent } from './shared/components/table/table.component';
 import { MenuDropDownComponent } from './shared/components/menu-drop-down/menu-drop-down.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { DataPropertyGetterPipe } from './shared/components/table/data-property-getter-pipe/data-property-getter.pipe';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { ServerErrorComponent } from './shared/server-error/server-error.component';
+import { NotFoundErrorComponent } from './shared/not-found/not-found-error.component';
+import { ConfirmationDialogComponent } from './shared/components/confirmation-dialog/confirmation-dialog.component';
+import { UpdatePlanComponent } from './shared/components/update-plan/update-plan.component';
 
 const MY_DATE_FORMATS = {
   parse: {
@@ -57,9 +60,12 @@ const MY_DATE_FORMATS = {
     SSOLoginCallbackComponent,
     UserLogoutComponent,
     FooterComponent,
-    TableComponent,
     MenuDropDownComponent,
     DataPropertyGetterPipe,
+    ServerErrorComponent,
+    NotFoundErrorComponent,
+    ConfirmationDialogComponent,
+    UpdatePlanComponent,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -76,9 +82,12 @@ const MY_DATE_FORMATS = {
     AppRoutingModule,
     CdkTreeModule,
     MatTreeModule,
-    MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatSortModule,
+    MatTableModule,
   ],
   providers: [
     {

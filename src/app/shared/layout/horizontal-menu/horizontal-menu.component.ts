@@ -23,6 +23,7 @@ export class HorizontalMenuComponent implements OnInit {
   }
 
   openWindow(item: any): void {
-    this.router.navigate(item.url);
+    console.log(item.url);
+    this.router.navigate([item.url]);
   }
 }
